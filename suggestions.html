@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playermade</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="content">
+        <header>
+            <div class="logo-box">
+              <img src="https://cdn.glitch.com/6261f5ef-f023-4363-9473-571c1dc0b27b%2Fgwafl.PNG?v=1619579880901" alt="Playermade Logo" width="140" height="140">    
+            </div>
+              <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Playermade</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="athletes.html">Athletes</a></li>
+                    <li><a href="suggestions.html">Suggestions</a></li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+      <main>
+        <div class="form-box">
+          <div class="suggestion-image">
+            <img src="https://images.unsplash.com/photo-1565369330537-78657c7ad44f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=588&q=80" alt="football practice" width="100%" height="50%">
+          </div>
+          <h2 class="suggestion-headline">
+            Your Opinions are Important!
+          </h2>
+          <p class="suggestion-paragraph">
+            Please let us know how we can better our experience for you! We will go through each suggestion carefully and respond thoroughly!
+          </p>
+          <div id="feedback">
+          <html>
+              <form action="/my-handling-form-page" method="post">
+               <ul>
+                <li>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="user_name">
+                </li>
+                <li>
+                  <label for="mail">E-mail:</label>
+                  <input type="email" id="mail" name="user_email">
+                </li>
+                <li>
+                  <label for="msg">Message:</label>
+                  <textarea id="msg" name="user_message"></textarea>
+                </li>
+                 <li class="button">
+                  <button type="submit">Send your message</button>
+                  </li>
+               </ul>      
+            </form>
+            </html>
+            </div>
+          <script>
+              const feedbackElement = document.getElementById('feedback');
+              const formElement = document.forms[0];
+              formElement.addEventListener('submit', function(e) {
+                  e.preventDefault();
+                  feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+                  feedbackElement.style.display = "block";
+                  document.body.classList.toggle('moveDown');
+              });
+          </script>
+        </div>
+      </main>
+      <footer>
+          <div class="social">
+            <a target="_blank" href="https://www.instagram.com">
+            <img src="https://cdn.glitch.com/6261f5ef-f023-4363-9473-571c1dc0b27b%2Finstagram.png?v=1620689714762" alt="Instagram Logo">
+            </a>
+            <a target="_blank" href="https://www.twitter.com">     
+            <img src="https://cdn.glitch.com/6261f5ef-f023-4363-9473-571c1dc0b27b%2Ftwitter.png?v=1620689713366" alt="Twitter Logo">
+            </a>
+            <a target="_blank" href="https://www.facebook.com/">
+            <img src="https://cdn.glitch.com/6261f5ef-f023-4363-9473-571c1dc0b27b%2Ffacebook.png?v=1620689717511" alt="Facebook logo">
+            </a>
+        </div>
+          <div class="copyright">
+            &copy; 2021 Playermade - Sean Jang
+        </div>        
+      </footer>
+    </div>
+  </body>
+
+</html>
